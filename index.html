@@ -82,7 +82,7 @@ h1{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(2.1rem,4.2vw,3
   letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.9rem}
 .figure svg{display:block;width:100%;height:auto}
 .curve{fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-.curve.draw{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 1.5s cubic-bezier(.65,.05,.2,1) forwards}
+.curve.draw{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 1.5s cubic-bezier(.65,.05,.2,1) forwards}
 .curve.d2{animation-delay:.28s}
 .bench{fill:none;stroke:var(--ink-3);stroke-width:1.2;stroke-dasharray:3 4;opacity:0}
 .bench.draw{animation:fade .7s ease .95s forwards}
@@ -94,6 +94,7 @@ h1{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(2.1rem,4.2vw,3
 .gridl{stroke:var(--rule-2);stroke-width:1}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes fade{to{opacity:1}}
+@keyframes fadesoft{to{opacity:.62}}
 @media (prefers-reduced-motion:reduce){
   .curve.draw{stroke-dashoffset:0;animation:none}
   .bench.draw,.dot.draw,.flab.draw{opacity:1;animation:none}
@@ -197,6 +198,22 @@ footer{margin-top:3.4rem;padding-top:2rem;border-top:1px solid var(--rule)}
   .dot{r:0}
 }
 
+/* ---------- K-8 arc figure ---------- */
+.phead{font-family:"Source Sans 3",system-ui,sans-serif;font-size:10.5px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;fill:var(--ink-3)}
+.axl2{font-family:"Source Sans 3",system-ui,sans-serif;font-size:9.5px;font-weight:700;
+  letter-spacing:.16em;fill:var(--ink-3)}
+.curve.soft{stroke-width:2.2;opacity:.62;stroke-dasharray:5 4}
+.curve.soft.draw{animation:fadesoft .8s ease .3s forwards;stroke-dashoffset:0;opacity:0}
+.curve.d3{animation-delay:.5s}
+.legend.show{display:block}
+.endlab{font-family:"Source Sans 3",system-ui,sans-serif;font-size:11.5px;font-weight:700;opacity:0;animation:fade .6s ease 1.3s forwards}
+@media (prefers-reduced-motion:reduce){.endlab{opacity:1;animation:none}}
+@media(max-width:900px){.endlab{display:none}}
+.nodata{font-family:"Source Sans 3",system-ui,sans-serif;font-size:11.5px;fill:var(--ink-3);font-style:italic}
+.figure + .figure{margin-top:-1.4rem}
+@media (prefers-reduced-motion:reduce){ .curve.soft.draw{opacity:.62;animation:none} }
+
 /* ---------- table of contents ---------- */
 .toclabel{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.6rem;font-weight:700;
   letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin:0 0 .6rem;
@@ -263,17 +280,18 @@ tr.bench2 td{color:var(--ink-3);font-style:italic}
       <span class="chev" aria-hidden="true">&#9662;</span>
     </summary>
     <ul class="nav">
-        <li><a href="#s1"><span class="rn">I</span>What To Do</a></li>
-        <li><a href="#s2"><span class="rn">II</span>The Right Number</a></li>
-        <li><a href="#s3"><span class="rn">III</span>What We Want</a></li>
-        <li><a href="#s4"><span class="rn">IV</span>The Schools</a></li>
-        <li><a href="#s5"><span class="rn">V</span>The Evidence</a></li>
-        <li><a href="#s6"><span class="rn">VI</span>What A Move Costs</a></li>
-        <li><a href="#s7"><span class="rn">VII</span>Calendar</a></li>
+        <li><a href="#q"><span class="rn">—</span>The Question</a></li>
+        <li><a href="#arc"><span class="rn">—</span>The Comparison</a></li>
+        <li><a href="#s2"><span class="rn">I</span>The Right Number</a></li>
+        <li><a href="#s4"><span class="rn">II</span>The Schools</a></li>
+        <li><a href="#s5"><span class="rn">III</span>The Evidence</a></li>
+        <li><a href="#s6"><span class="rn">IV</span>What A Move Costs</a></li>
+        <li><a href="#s1"><span class="rn">V</span>What To Do</a></li>
         <li><a href="#field"><span class="rn">—</span>Full Field</a></li>
         <li><a href="#method"><span class="rn">A</span>Method</a></li>
         <li><a href="#city"><span class="rn">B</span>Full City Data</a></li>
-    </ul>
+        <li><a href="#screens"><span class="rn">C</span>Screens Evidence</a></li>
+      </ul>
   </details>
 </div>
 
@@ -282,60 +300,175 @@ tr.bench2 td{color:var(--ink-3);font-style:italic}
     <div class="mark">Private Memorandum<span>School Selection · River</span></div>
     <p class="toclabel">Contents</p>
     <ul class="nav">
-      <li><a href="#s1"><span class="rn">I</span>What To Do</a></li>
-      <li><a href="#s2"><span class="rn">II</span>The Right Number</a></li>
-      <li><a href="#s3"><span class="rn">III</span>What We Want</a></li>
-      <li><a href="#s4"><span class="rn">IV</span>The Schools</a></li>
-      <li><a href="#s5"><span class="rn">V</span>The Evidence</a></li>
-      <li><a href="#s6"><span class="rn">VI</span>What A Move Costs</a></li>
-      <li><a href="#s7"><span class="rn">VII</span>Calendar</a></li>
-      <li><a href="#field"><span class="rn">—</span>Full Field</a></li>
-      <li><a href="#method"><span class="rn">A</span>Method</a></li>
-      <li><a href="#city"><span class="rn">B</span>Full City Data</a></li>
-    </ul>
+        <li><a href="#q"><span class="rn">—</span>The Question</a></li>
+        <li><a href="#arc"><span class="rn">—</span>The Comparison</a></li>
+        <li><a href="#s2"><span class="rn">I</span>The Right Number</a></li>
+        <li><a href="#s4"><span class="rn">II</span>The Schools</a></li>
+        <li><a href="#s5"><span class="rn">III</span>The Evidence</a></li>
+        <li><a href="#s6"><span class="rn">IV</span>What A Move Costs</a></li>
+        <li><a href="#s1"><span class="rn">V</span>What To Do</a></li>
+        <li><a href="#field"><span class="rn">—</span>Full Field</a></li>
+        <li><a href="#method"><span class="rn">A</span>Method</a></li>
+        <li><a href="#city"><span class="rn">B</span>Full City Data</a></li>
+        <li><a href="#screens"><span class="rn">C</span>Screens Evidence</a></li>
+      </ul>
   </aside>
 
   <main>
     <p class="eyebrow">Private research memorandum · rev. B</p>
     <h1>Choosing a K&ndash;8 School in New Orleans</h1>
-    <p class="dek">An evidence review of River&rsquo;s options, measured on the cohort he belongs to. Covers an immediate 2026&ndash;27 transfer and the 2027&ndash;28 lottery.</p>
+    <p class="dek">Three schools clear the bar. This is what separates them, how the evidence was measured, and what it does and doesn&rsquo;t tell us about the grades River is actually entering.</p>
 
     <div class="meta">
-      <div><b>Schools that fit</b>Audubon · ISL · Plessy</div>
-      <div><b>Decision window</b>Open Enrollment closes 4 Sept 2026</div>
+      <div><b>Comparing</b>Audubon · ISL · Plessy</div>
+      <div><b>Decision window</b>Open Enrollment closes 4 Sept 2026 &mdash; see Section V</div>
       <div><b>Prepared</b>22 August 2026</div>
     </div>
 
-    <div class="alert">
-      <span class="lbl">Time-critical · Open Enrollment closes 4 September</span>
-      <p>We can move River this school year without a lottery. NOLA-PS Open Enrollment runs through 4 September and places students into any school holding an open seat, first come first served. <strong>Audubon has no seats. ISL does.</strong></p>
-      <p>Miss that date and the next opening is 1 October, which requires a documented hardship. Wanting a better school doesn&rsquo;t qualify. After that the next clean shot is the NCAP Main Round on 2 November, which puts him in first grade in August 2027.</p>
-    </div>
+    <section id="q">
+      <p class="snum">The question</p>
+      <h2>Three schools, one decision</h2>
 
-    <section id="s1">
-      <p class="snum">Section I</p>
-      <h2>What to do</h2>
+      <p class="lede">River starts kindergarten. We are choosing where he spends the next nine years, and the schools worth choosing between are down to three.</p>
 
-      <div class="action">
-        <div class="action-t">Call ISL this week about a kindergarten seat.</div>
-        <p>Audubon fits better and ties on outcomes, but has nothing open. ISL is the only school that is both available now and clearly better than Plessy for River &mdash; thirteen points ahead in reading and twenty-one in math for his cohort. Starting in kindergarten also sidesteps the immersion penalty, since he&rsquo;d learn the language alongside his class instead of a year behind it. Ask two things: is a kindergarten seat open for 2026&ndash;27, and what do I submit to claim it.</p>
+      <p>Every school in New Orleans was first put through a pedagogy screen &mdash; five things we want a school to do, listed below, applied before I looked at a single test score. Most of the city fell out there, including two schools with the best outcomes in New Orleans. Three cleared it: <strong>Audubon Charter</strong>, the <strong>International School of Louisiana</strong>, and <strong>Homer Plessy</strong>, where he is enrolled now. A fourth, <strong>The Willow School</strong>, clears it too but has the hardest admission in the city, so it is a lottery ticket rather than a plan.</p>
+
+      <h4>What we&rsquo;re selecting for</h4>
+      <ol>
+        <li><strong>Whole books and sustained writing.</strong> Complex texts read entire, and writing long enough to require thinking.</li>
+        <li><strong>Real mathematics.</strong> Problem-based and discourse-driven rather than procedural drill.</li>
+        <li><strong>Arts as core, not enrichment.</strong> Taught daily by specialists, not a rotation.</li>
+        <li><strong>Screens as an occasional tool.</strong> Not an organizing principle of the day. A school marketing &ldquo;AI readiness&rdquo; or one-to-one devices is telling us something, and it isn&rsquo;t good. <a href="#screens">The evidence for this is in Appendix C</a>.</li>
+        <li><strong>Depth over credential.</strong> Work produced, rather than scores optimized and homework accumulated.</li>
+      </ol>
+
+      <p>These describe the classical liberal arts, which is an old curriculum and not a new one. That&rsquo;s the appeal: an education built on books, math, argument and the arts holds its value across a wide range of futures, so picking it doesn&rsquo;t require guessing which future arrives. Section II argues each school against all five.</p>
+    </section>
+
+    <section id="arc">
+      <p class="snum">The comparison</p>
+      <h2>The three schools across K&ndash;8</h2>
+
+      <p class="lede">This is the whole arc River would travel, and it is the reason the choice is not obvious.</p>
+
+      <figure class="figure">
+        <div class="figure-head">Figure 1 · Reading · percent at or above grade level</div>
+        <svg viewBox="0 0 760 352" role="img" aria-label="Reading. Left panel kindergarten to grade 3, literacy screener, all students: ISL rises 22.8 to 68.3, Audubon 71.6 to 82.5, Plessy falls 58.6 to 48.5. Right panel grades 3 to 8, LEAP, River's cohort: Audubon 86 to 90, ISL 68 to 82, Plessy 66 to 65, parish benchmark near 82.">
+<line class="gridl" x1="58" y1="268.0" x2="632" y2="268.0"/>
+<text class="axl" x="46" y="272.0" text-anchor="end">0</text>
+<line class="gridl" x1="58" y1="148.0" x2="632" y2="148.0"/>
+<text class="axl" x="46" y="152.0" text-anchor="end">50</text>
+<line class="gridl" x1="58" y1="28.0" x2="632" y2="28.0"/>
+<text class="axl" x="46" y="32.0" text-anchor="end">100</text>
+<line x1="306" y1="20" x2="306" y2="276" stroke="#E2DCD3" stroke-width="1"/>
+<text class="phead" x="58" y="14">K&#8211;3 screener &#183; all students</text>
+<text class="phead" x="332" y="14">LEAP reading &#183; River&#8217;s cohort</text>
+<text class="axl" x="58" y="314" text-anchor="middle">K</text>
+<text class="axl" x="132" y="314" text-anchor="middle">1</text>
+<text class="axl" x="206" y="314" text-anchor="middle">2</text>
+<text class="axl" x="280" y="314" text-anchor="middle">3</text>
+<text class="axl" x="332" y="314" text-anchor="middle">3</text>
+<text class="axl" x="392" y="314" text-anchor="middle">4</text>
+<text class="axl" x="452" y="314" text-anchor="middle">5</text>
+<text class="axl" x="512" y="314" text-anchor="middle">6</text>
+<text class="axl" x="572" y="314" text-anchor="middle">7</text>
+<text class="axl" x="632" y="314" text-anchor="middle">8</text>
+<text class="axl2" x="169" y="336" text-anchor="middle">GRADE</text>
+<text class="axl2" x="482" y="336" text-anchor="middle">GRADE</text>
+<polyline class="bench draw" points="58,102.4 132,106.0 206,113.4 280,114.4"/>
+<polyline class="bench draw" points="332,73.6 392,76.0 452,78.4 512,61.6 572,61.6 632,66.4"/>
+<polyline class="curve soft draw" stroke="#A87B0E" points="58,96.2 132,101.7 206,73.6 280,70.0"/>
+<polyline class="curve draw" stroke="#A87B0E" points="332,61.6 392,80.8 452,102.4 512,90.4 572,54.4 632,52.0"/>
+<circle class="dot draw" cx="58" cy="96.2" r="3" fill="#A87B0E" opacity=".62" style="animation-delay:1.15s"/>
+<circle class="dot draw" cx="632" cy="52.0" r="4" fill="#A87B0E" style="animation-delay:1.15s"/>
+<polyline class="curve soft draw d2" stroke="#0B6FA4" points="58,213.3 132,172.5 206,125.4 280,104.1"/>
+<polyline class="curve draw d2" stroke="#0B6FA4" points="332,104.8 392,59.2 452,102.4 512,66.4 572,47.2 632,71.2"/>
+<circle class="dot draw" cx="58" cy="213.3" r="3" fill="#0B6FA4" opacity=".62" style="animation-delay:1.15s"/>
+<circle class="dot draw" cx="632" cy="71.2" r="4" fill="#0B6FA4" style="animation-delay:1.15s"/>
+<polyline class="curve soft draw d3" stroke="#A83232" points="58,127.4 132,101.0 206,131.4 280,151.6"/>
+<polyline class="curve draw d3" stroke="#A83232" points="332,109.6 392,126.4 452,114.4 512,78.4 572,100.0 632,112.0"/>
+<circle class="dot draw" cx="58" cy="127.4" r="3" fill="#A83232" opacity=".62" style="animation-delay:1.15s"/>
+<circle class="dot draw" cx="632" cy="112.0" r="4" fill="#A83232" style="animation-delay:1.15s"/>
+<text class="endlab" x="644" y="56.0" fill="#A87B0E">Audubon 90</text>
+<text class="endlab" x="644" y="75.2" fill="#0B6FA4">ISL 82</text>
+<text class="endlab" x="644" y="116.0" fill="#A83232">Plessy 65</text>
+</svg>
+        <ul class="legend show">
+          <li><i style="background:#A87B0E"></i>Audubon Charter <b>82.5 &rarr; 90</b></li>
+          <li><i style="background:#0B6FA4"></i>Int&rsquo;l School of Louisiana <b>22.8 &rarr; 82</b></li>
+          <li><i style="background:#A83232"></i>Homer Plessy <b>58.6 &rarr; 65</b></li>
+          <li><i class="dash"></i>Benchmark <span style="color:var(--ink-3)">(state, then parish)</span></li>
+        </ul>
+        <p class="figure-cap"><strong>Two panels, because there is no single instrument that spans K&ndash;8.</strong> The left panel is the end-of-year literacy screener, the only measure that reaches down to kindergarten. The right panel is LEAP, which begins at grade 3. The lines are not continuous across the divider and should not be read as one curve &mdash; see below.</p>
+      </figure>
+
+      <figure class="figure">
+        <div class="figure-head">Figure 2 · Mathematics · percent at Mastery or above</div>
+        <svg viewBox="0 0 760 352" role="img" aria-label="Mathematics, grades 3 to 7, LEAP, River's cohort: ISL 60 to 80, Audubon 84 down to 72, Plessy 52 to 56, parish benchmark 73 to 75. No data before grade 3 because the screener measures reading only.">
+<line class="gridl" x1="58" y1="268.0" x2="632" y2="268.0"/>
+<text class="axl" x="46" y="272.0" text-anchor="end">0</text>
+<line class="gridl" x1="58" y1="148.0" x2="632" y2="148.0"/>
+<text class="axl" x="46" y="152.0" text-anchor="end">50</text>
+<line class="gridl" x1="58" y1="28.0" x2="632" y2="28.0"/>
+<text class="axl" x="46" y="32.0" text-anchor="end">100</text>
+<line x1="306" y1="20" x2="306" y2="276" stroke="#E2DCD3" stroke-width="1"/>
+<rect x="58" y="20" width="248" height="256" fill="#EFEAE3" opacity=".38"/>
+<text class="phead" x="58" y="14">K&#8211;3 &#183; no instrument</text>
+<text class="phead" x="332" y="14">LEAP mathematics &#183; River&#8217;s cohort</text>
+<text class="nodata" x="182" y="140" text-anchor="middle">The screener measures</text>
+<text class="nodata" x="182" y="158" text-anchor="middle">reading only. There is no</text>
+<text class="nodata" x="182" y="176" text-anchor="middle">early-grades math figure.</text>
+<text class="axl" x="332" y="314" text-anchor="middle">3</text>
+<text class="axl" x="407" y="314" text-anchor="middle">4</text>
+<text class="axl" x="482" y="314" text-anchor="middle">5</text>
+<text class="axl" x="557" y="314" text-anchor="middle">6</text>
+<text class="axl" x="632" y="314" text-anchor="middle">7</text>
+<text class="axl2" x="482" y="336" text-anchor="middle">GRADE</text>
+<polyline class="bench draw" points="332,92.8 407,102.4 482,119.2 557,76.0 632,88.0"/>
+<polyline class="curve draw" stroke="#A87B0E" points="332,66.4 407,104.8 482,140.8 557,121.6 632,95.2"/>
+<circle class="dot draw" cx="632" cy="95.2" r="4" fill="#A87B0E" style="animation-delay:1.15s"/>
+<polyline class="curve draw d2" stroke="#0B6FA4" points="332,124.0 407,71.2 482,112.0 557,102.4 632,76.0"/>
+<circle class="dot draw" cx="632" cy="76.0" r="4" fill="#0B6FA4" style="animation-delay:1.15s"/>
+<polyline class="curve draw d3" stroke="#A83232" points="332,143.2 407,188.8 482,169.6 557,92.8 632,133.6"/>
+<circle class="dot draw" cx="632" cy="133.6" r="4" fill="#A83232" style="animation-delay:1.15s"/>
+<text class="endlab" x="644" y="80.0" fill="#0B6FA4">ISL 80</text>
+<text class="endlab" x="644" y="99.2" fill="#A87B0E">Audubon 72</text>
+<text class="endlab" x="644" y="137.6" fill="#A83232">Plessy 56</text>
+</svg>
+        <ul class="legend show">
+          <li><i style="background:#A87B0E"></i>Audubon Charter <b>84 &rarr; 72</b></li>
+          <li><i style="background:#0B6FA4"></i>Int&rsquo;l School of Louisiana <b>60 &rarr; 80</b></li>
+          <li><i style="background:#A83232"></i>Homer Plessy <b>52 &rarr; 56</b></li>
+          <li><i class="dash"></i>Orleans Parish benchmark</li>
+        </ul>
+        <p class="figure-cap"><strong>Math has no early-grades measure at all.</strong> The K&ndash;3 screener tests reading, so nothing covers mathematics before grade 3 &mdash; the shaded region is the gap, not a zero. Grade 8 is missing because students take Algebra I, which reports separately. Note that the two schools cross: Audubon starts strongest at grade 3 and declines, while ISL starts lowest and finishes highest. Plessy is under the parish benchmark at every grade in both subjects.</p>
+      </figure>
+
+      <h3>What you are looking at</h3>
+
+      <p><strong>Left panel, kindergarten through grade 3.</strong> Louisiana&rsquo;s end-of-year literacy screener, which measures foundational reading &mdash; decoding, phonemic awareness, fluency. It is the only instrument that covers the grades River is actually about to enter. Three shapes: Audubon starts high and stays high, ISL starts at 22.8 and climbs steeply, Plessy starts near average and <em>falls</em> to 48.5.</p>
+
+      <p><strong>Right panel, grades 3 through 8.</strong> LEAP mastery in reading. Audubon and ISL both finish at or near the parish benchmark. Plessy never reaches it in any grade.</p>
+
+      <div class="call">
+        <span class="lbl">Why the panels don&rsquo;t connect</span>
+        <p>They are different tests, and they describe different groups of children. The screener figures are <strong>all students</strong> at each school &mdash; the only cut published for K&ndash;3. The LEAP figures are River&rsquo;s cohort. At Audubon and ISL the two nearly agree at grade 3 (82.5 against 86; 68.3 against 68), so the join is close to honest. At Plessy they diverge by seventeen points, 48.5 against 66, because Plessy&rsquo;s school-wide average sits far below the result it gets for children like River. Splicing those into one line would invent a school that doesn&rsquo;t exist.</p>
       </div>
 
-      <div class="action">
-        <div class="action-t">Call Willow the same day.</div>
-        <p>Best school in the city for his cohort and it passes the pedagogy screen. Also the hardest admission in New Orleans. A seat now would decide everything; otherwise it&rsquo;s a lottery entry.</p>
-      </div>
+      <div class="call quiet">
+        <span class="lbl">The kindergarten problem, and how much of it is already answered</span>
+        <p>LEAP starts at grade 3 and River starts at kindergarten, so the measure this report is built on says nothing about his first three years. The immersion finding disposes of most of that worry, but not all of it.</p>
+        <p><strong>For ISL it is answered.</strong> The low early figures have a documented cause and a predicted end: teach in French or Spanish, test in English, and the penalty lifts once English instruction has been running. It does lift, on schedule &mdash; 68 at grade 3 becomes 87 at grade 4. There is no need to read 22.8 at kindergarten as evidence about teaching.</p>
+        <p><strong>For Plessy it is not.</strong> Plessy teaches in English, from an English curriculum, with no penalty to invoke &mdash; and still falls ten points across the same four years, 58.6 to 48.5. That decline is the one number in the left panel with no explanation attached, and it belongs to the school he is enrolled in today.</p>
+        <p><strong>What neither answers</strong> is that the K&ndash;3 figures are all-students and no cohort-level version is published. So the residual blind spot is narrow and specific: not &ldquo;we know nothing about K&ndash;2,&rdquo; but &ldquo;we cannot see what Plessy&rsquo;s decline looks like for a child like River, and that is the question the move turns on.&rdquo;</p>
 
-      <div class="action">
-        <div class="action-t">If nothing opens by 4 September, rank for 2027&ndash;28.</div>
-        <p>Audubon, Willow, ISL, Plessy. Use all twelve NCAP rankings; the algorithm only matches against schools you list, so there&rsquo;s no cost to ranking deeply.</p>
-      </div>
-
-      <p>Plessy stays on the list rather than under it. It passes the pedagogy screen, staying carries no admissions risk and no disruption, and at least its weakness is measurable.</p>
+      <h3>ISL&rsquo;s shape needs one more note</h3>
+      <p>The steep climb in the left panel is largely the language, not the teaching: ISL runs kindergarten and first grade about 90% in French or Spanish, with English Language Arts appearing at sixty minutes a day from grade two. <a href="https://www.researchgate.net/publication/265606009_Student_outcomes_in_one-way_two-way_and_indigenous_language_immersion_education">Genesee and Lindholm-Leary</a> find immersion students match mainstream peers in non-language subjects, on the condition that you test them in the second language and allow for incomplete acquisition &mdash; which Louisiana does not.</p>
+      <p>But the right panel is not a smooth escape from that penalty either. ISL sits above the parish benchmark at grades 4 and 7 and below it at 3, 5, 6 and 8. Read the 3&ndash;8 aggregate rather than any single grade, and treat the jagged middle as noise in small cohort cells.</p>
     </section>
 
     <section id="s2">
-      <p class="snum">Section II</p>
+      <p class="snum">Section I</p>
       <h2>The number most sources get wrong</h2>
       <p class="lede">Every school-level score you&rsquo;ll see quoted describes all students at that school. River is white and not economically disadvantaged, and results inside a single New Orleans building split hard along both lines.</p>
       <p>So this report ranks schools on LEAP mastery for the white cohort across grades 3 through 8, checked against the not-economically-disadvantaged cohort.</p>
@@ -356,7 +489,7 @@ tr.bench2 td{color:var(--ink-3);font-style:italic}
       </div>
       <p class="tnote">The first two columns are what public sources report. The last two are what River would live. Depending on which column you read, the distance between ISL and Plessy changes size by a factor of six.</p>
 
-      <p>A school average describes whoever enrolled there. At Plessy, 61% of students qualify for free or reduced lunch, and the school-level reading figure of 41 climbs to 67 for the white cohort. That gap says something about the school and not only about who walks through the door &mdash; Plessy produces sharply different results for different children in the same building. Section V reports every cohort for that reason.</p>
+      <p>A school average describes whoever enrolled there. At Plessy, 61% of students qualify for free or reduced lunch, and the school-level reading figure of 41 climbs to 67 for the white cohort. That gap says something about the school and not only about who walks through the door &mdash; Plessy produces sharply different results for different children in the same building. Section III reports every cohort for that reason.</p>
 
       <div class="call quiet">
         <span class="lbl">Verify any of this</span>
@@ -364,32 +497,8 @@ tr.bench2 td{color:var(--ink-3);font-style:italic}
       </div>
     </section>
 
-    <section id="s3">
-      <p class="snum">Section III</p>
-      <h2>What we&rsquo;re selecting for</h2>
-      <p>Five criteria, applied to every school before I looked at a single test score.</p>
-      <ol>
-        <li><strong>Whole books and sustained writing.</strong> Complex texts read entire, and writing long enough to require thinking.</li>
-        <li><strong>Real mathematics.</strong> Problem-based and discourse-driven rather than procedural drill.</li>
-        <li><strong>Arts as core, not enrichment.</strong> Taught daily by specialists, not a rotation.</li>
-        <li><strong>Screens as an occasional tool.</strong> Not an organizing principle of the day.</li>
-        <li><strong>Depth over credential.</strong> Work produced, rather than scores optimized and homework accumulated.</li>
-      </ol>
-
-      <p>These describe the classical liberal arts, which is an old curriculum and not a new one. That&rsquo;s the appeal: an education built on books, math, argument and the arts holds its value across a wide range of futures, so picking it doesn&rsquo;t require guessing which future arrives. If routine cognitive output gets cheap, what stays valuable is knowing which questions are worth asking, reading closely, doing math well enough to catch a number that&rsquo;s lying, and having taste you can defend. None of that is a new subject.</p>
-
-      <div class="call quiet">
-        <span class="lbl">Selection principle</span>
-        <p>A school marketing &ldquo;AI readiness,&rdquo; one-to-one devices or a technology-forward brand is telling us something, and it isn&rsquo;t good. Same goes on criterion five for a school that talks about college preparation in the elementary grades.</p>
-      </div>
-
-      <h4>What the evidence says about screens</h4>
-      <p>One-to-one devices are now standard &mdash; an <a href="https://www.edweek.org/technology/what-the-massive-shift-to-1-to-1-computing-means-for-schools-in-charts/2022/05">EdWeek survey</a> found 40% of districts gave every elementary student a device before the pandemic, and 84% did by March 2021. Common doesn&rsquo;t mean it works. <a href="https://www.unesco.org/gem-report/en/articles/unesco-issues-urgent-call-appropriate-use-technology-education">UNESCO&rsquo;s 2023 GEM Report</a> found the benefits vanish with heavy use or without a qualified teacher, and that across seventeen states only 11% of educators consulted peer-reviewed evidence before adopting an educational technology. A <a href="https://journals.sagepub.com/doi/10.3102/0034654321998074">meta-analysis of 39 studies</a> covering 1,812 children found lower comprehension for digital books when the medium was the only thing that changed. Most usefully, <a href="https://journals.sagepub.com/doi/10.3102/0091732X09349791">Warschauer</a> found that once every kid has a device, what they do on it splits by class: lower-income students get routed toward drill, higher-income students toward research and analysis.</p>
-      <p>So on a tour the question isn&rsquo;t whether kids use laptops. It&rsquo;s how many minutes a day, which programs, and whether that time adds to teacher-led instruction or replaces it.</p>
-    </section>
-
     <section id="s4">
-      <p class="snum">Section IV</p>
+      <p class="snum">Section II</p>
       <h2>The schools</h2>
       <p class="lede">Three pass the pedagogy screen, including the school River already attends. A fourth passes and is functionally a lottery ticket.</p>
       <p class="tnote">Cohort figures are LEAP % Advanced or Mastery, white cohort, grades 3&ndash;8, spring 2026. The citywide benchmark is 82 reading, 72 math.</p>
@@ -445,7 +554,7 @@ tr.bench2 td{color:var(--ink-3);font-style:italic}
     </section>
 
     <section id="s5">
-      <p class="snum">Section V</p>
+      <p class="snum">Section III</p>
       <h2>The evidence</h2>
       <p class="tnote">Percent scoring Advanced or Mastery, spring 2026 LEAP, white cohort.</p>
 
@@ -511,16 +620,44 @@ tr.bench2 td{color:var(--ink-3);font-style:italic}
     </section>
 
     <section id="s6">
-      <p class="snum">Section VI</p>
+      <p class="snum">Section IV</p>
       <h2>What a move costs</h2>
       <p class="lede">No table settles this, and it belongs next to the numbers rather than underneath them.</p>
       <p>Plessy teaches dance, music, theater and visual art every day. ISL puts art and music in an enrichment block. Moving him improves reading and math by a clear margin and cuts arts instruction by a real one.</p>
       <p>Transferring now also pulls a five-year-old out three weeks into kindergarten and gives up the Plessy seat. If ISL goes badly, he re-enters through the same first-come process with whatever&rsquo;s left.</p>
     </section>
 
-    <section id="s7">
-      <p class="snum">Section VII</p>
-      <h2>Calendar and triggers</h2>
+    <section id="s1">
+      <p class="snum">Section V</p>
+      <h2>What to do, and by when</h2>
+
+      <div class="alert">
+      <span class="lbl">The deadline · 4 September 2026</span>
+      <p>We can move River this school year without a lottery. NOLA-PS Open Enrollment runs through 4 September and places students into any school holding an open seat, first come first served. <strong>Audubon has no seats. ISL does.</strong></p>
+      <p>Miss that date and the next opening is 1 October, which requires a documented hardship. Wanting a better school doesn&rsquo;t qualify. After that the next clean shot is the NCAP Main Round on 2 November, which puts him in first grade in August 2027.</p>
+    </div>
+
+      <div class="action">
+        <div class="action-t">Call ISL this week about a kindergarten seat.</div>
+        <p>Audubon fits better and ties on outcomes, but has nothing open. ISL is the only school that is both available now and clearly better than Plessy for River &mdash; thirteen points ahead in reading and twenty-one in math for his cohort. Starting in kindergarten also sidesteps the immersion penalty, since he&rsquo;d learn the language alongside his class instead of a year behind it. Ask two things: is a kindergarten seat open for 2026&ndash;27, and what do I submit to claim it.</p>
+      </div>
+
+      <div class="action">
+        <div class="action-t">Call Willow the same day.</div>
+        <p>Best school in the city for his cohort and it passes the pedagogy screen. Also the hardest admission in New Orleans. A seat now would decide everything; otherwise it&rsquo;s a lottery entry.</p>
+      </div>
+
+      <div class="action">
+        <div class="action-t">If nothing opens by 4 September, rank for 2027&ndash;28.</div>
+        <p>Audubon, Willow, ISL, Plessy. Use all twelve NCAP rankings; the algorithm only matches against schools you list, so there&rsquo;s no cost to ranking deeply.</p>
+      </div>
+
+      <p>Plessy stays on the list rather than under it. It passes the pedagogy screen, staying carries no admissions risk and no disruption, and at least its weakness is measurable.</p>
+    </section>
+
+    <div id="s7">
+      
+      <h3>Calendar and triggers</h3>
 
       <div class="tw">
         <table class="cal">
@@ -546,12 +683,12 @@ tr.bench2 td{color:var(--ink-3);font-style:italic}
         <li><strong>Move Plessy up</strong> if it names a credible structured phonics program and its 2027 cohort figures close on the parish benchmarks of 82 and 72.</li>
         <li><strong>Move Plessy down</strong> if the internal gap widens past 41 points or the charter renewal recommendation this December goes badly.</li>
       </ul>
-    </section>
+    </div>
 
     <section id="field">
       <p class="snum">Reference</p>
       <h2>The full field</h2>
-      <p class="tnote">Ranked on River&rsquo;s cohort outcomes. Only the first four pass the pedagogy screen.</p>
+      <p class="tnote">Ranked on River&rsquo;s cohort outcomes. Only the first four pass the pedagogy screen in Section II.</p>
       <div class="tw">
         <table>
           <thead><tr><th class="n">#</th><th>School</th><th>Cost</th><th class="n">ELA</th><th class="n">Math</th><th>Pedagogy</th><th>Note</th></tr></thead>
@@ -637,6 +774,17 @@ tr.bench2 td{color:var(--ink-3);font-style:italic}
         </table>
       </div>
       <p class="tnote">LEAP figures show percent Mastery or above, grades 3&ndash;8. Screener figures show percent reading on or above grade level, end of year 2025&ndash;26.</p>
+    </section>
+
+    <section id="screens">
+      <p class="snum">Appendix C</p>
+      <h2>Evidence behind the screens criterion</h2>
+      <p class="tnote">Criterion four in Section III holds that screens should be an occasional tool rather than an organizing principle. This is the basis for it. It changes no figure in the report; it explains one of the five bars every school was measured against.</p>
+      
+      <p>One-to-one devices are now standard &mdash; an <a href="https://www.edweek.org/technology/what-the-massive-shift-to-1-to-1-computing-means-for-schools-in-charts/2022/05">EdWeek survey</a> found 40% of districts gave every elementary student a device before the pandemic, and 84% did by March 2021. Common doesn&rsquo;t mean it works. <a href="https://www.unesco.org/gem-report/en/articles/unesco-issues-urgent-call-appropriate-use-technology-education">UNESCO&rsquo;s 2023 GEM Report</a> found the benefits vanish with heavy use or without a qualified teacher, and that across seventeen states only 11% of educators consulted peer-reviewed evidence before adopting an educational technology. A <a href="https://journals.sagepub.com/doi/10.3102/0034654321998074">meta-analysis of 39 studies</a> covering 1,812 children found lower comprehension for digital books when the medium was the only thing that changed. Most usefully, <a href="https://journals.sagepub.com/doi/10.3102/0091732X09349791">Warschauer</a> found that once every kid has a device, what they do on it splits by class: lower-income students get routed toward drill, higher-income students toward research and analysis.</p>
+      <p>So on a tour the question isn&rsquo;t whether kids use laptops. It&rsquo;s how many minutes a day, which programs, and whether that time adds to teacher-led instruction or replaces it.</p>
+    
+    
     </section>
 
     <footer>
