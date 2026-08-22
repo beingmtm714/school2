@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Choosing a K–8 School for the Age of Machine Intelligence</title>
+<meta name="description" content="A liberal-arts framework and evidence review for a first-grade placement in New Orleans, 2027–28.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Source+Sans+3:ital,wght@0,300..700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16130F;
+  --ink-2:#494139;
+  --ink-3:#857B70;
+  --paper:#F7F5F1;
+  --card:#FFFFFF;
+  --rule:#E2DCD3;
+  --rule-2:#EFEAE3;
+  --ox:#7A2E2E;
+  --ox-tint:#F4EBE8;
+  --pine:#1F5C4D;
+  --pine-tint:#E9F0ED;
+  --amber:#8A6D1F;
+  --measure:41rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1.0625rem;line-height:1.62;
+  font-optical-sizing:auto;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--ox);text-decoration:none;border-bottom:1px solid rgba(122,46,46,.3)}
+a:hover{border-bottom-color:var(--ox)}
+:focus-visible{outline:2px solid var(--ox);outline-offset:3px;border-radius:2px}
+
+/* ---------- shell ---------- */
+.shell{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:0;max-width:74rem;margin:0 auto}
+
+/* ---------- rail ---------- */
+.rail{position:sticky;top:0;align-self:start;height:100vh;padding:2.6rem 1.6rem 2rem 1.6rem;
+  border-right:1px solid var(--rule);display:flex;flex-direction:column}
+.mark{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.6rem;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--ox);margin-bottom:2.2rem;line-height:1.5}
+.mark span{display:block;color:var(--ink-3);font-weight:600;letter-spacing:.14em}
+.nav{list-style:none;margin:0;padding:0;flex:1}
+.nav li{margin-bottom:.15rem}
+.nav a{display:flex;gap:.7rem;align-items:baseline;padding:.42rem .5rem .42rem 0;border:0;
+  font-family:"Source Sans 3",system-ui,sans-serif;font-size:.845rem;line-height:1.35;color:var(--ink-2)}
+.nav a:hover{color:var(--ink)}
+.nav a .rn{font-size:.63rem;font-weight:700;letter-spacing:.1em;color:var(--ink-3);
+  min-width:1.35rem;flex:none;font-variant-numeric:tabular-nums}
+.nav a[aria-current="true"]{color:var(--ox);font-weight:600}
+.nav a[aria-current="true"] .rn{color:var(--ox)}
+
+.dl{display:block;margin-top:1.4rem;padding:.72rem .85rem;background:var(--ink);color:var(--paper);
+  border:0;border-radius:2px;font-family:"Source Sans 3",system-ui,sans-serif;font-size:.78rem;
+  font-weight:600;letter-spacing:.03em;text-align:left;transition:background .18s ease}
+.dl:hover{background:var(--ox);border:0}
+.dl .sub{display:block;font-weight:400;font-size:.68rem;color:rgba(247,245,241,.62);margin-top:.15rem;letter-spacing:.02em}
+
+/* ---------- main ---------- */
+main{padding:3.2rem 3.4rem 6rem 3.4rem;min-width:0}
+.eyebrow{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.66rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--ox);margin:0 0 1.1rem}
+h1{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(2.1rem,4.2vw,3.15rem);
+  line-height:1.1;letter-spacing:-.018em;margin:0 0 1rem;max-width:18ch}
+.dek{font-style:italic;font-size:1.18rem;line-height:1.5;color:var(--ink-2);max-width:34rem;margin:0 0 2rem}
+
+.meta{display:flex;flex-wrap:wrap;gap:.4rem 2.4rem;font-family:"Source Sans 3",system-ui,sans-serif;
+  font-size:.78rem;color:var(--ink-2);padding:1rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.meta b{display:block;font-size:.6rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.1rem}
+
+/* ---------- hero figure ---------- */
+.figure{margin:2.6rem 0 3.4rem;background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:1.6rem 1.4rem 1.2rem}
+.figure-head{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.63rem;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.9rem}
+.figure svg{display:block;width:100%;height:auto}
+.curve{fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.curve.draw{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 1.5s cubic-bezier(.65,.05,.2,1) forwards}
+.curve.d2{animation-delay:.28s}
+.bench{fill:none;stroke:var(--ink-3);stroke-width:1.2;stroke-dasharray:3 4;opacity:0}
+.bench.draw{animation:fade .7s ease .95s forwards}
+.dot{opacity:0}
+.dot.draw{animation:fade .5s ease forwards}
+.flab{font-family:"Source Sans 3",system-ui,sans-serif;font-size:11.5px;font-weight:700;opacity:0}
+.flab.draw{animation:fade .6s ease 1.3s forwards}
+.axl{font-family:"Source Sans 3",system-ui,sans-serif;font-size:11px;fill:var(--ink-3);font-weight:600;letter-spacing:.06em}
+.gridl{stroke:var(--rule-2);stroke-width:1}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .curve.draw{stroke-dashoffset:0;animation:none}
+  .bench.draw,.dot.draw,.flab.draw{opacity:1;animation:none}
+}
+.legend{display:none;list-style:none;margin:.9rem 0 0;padding:0;
+  font-family:"Source Sans 3",system-ui,sans-serif;font-size:.78rem;color:var(--ink-2)}
+.legend li{display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.legend i{width:16px;height:3px;border-radius:2px;flex:none}
+.legend i.dash{background:repeating-linear-gradient(90deg,#857B70 0 4px,transparent 4px 7px);height:2px}
+.legend b{font-weight:700;font-variant-numeric:tabular-nums}
+.figure-cap{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.76rem;line-height:1.55;
+  color:var(--ink-2);margin:1rem 0 0;padding-top:.9rem;border-top:1px solid var(--rule-2)}
+
+/* ---------- sections ---------- */
+section{scroll-margin-top:1.5rem;padding-top:2.6rem;margin-top:2.6rem;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:0;margin-top:0}
+.snum{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.63rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ox);margin:0 0 .35rem}
+h2{font-family:"Newsreader",serif;font-weight:500;font-size:1.72rem;line-height:1.2;
+  letter-spacing:-.012em;margin:0 0 1.3rem}
+h3{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.9rem;font-weight:700;
+  letter-spacing:.01em;margin:2rem 0 .6rem}
+h4{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.68rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:1.7rem 0 .55rem}
+p{margin:0 0 1rem;max-width:var(--measure)}
+.lede{font-size:1.14rem;line-height:1.55;color:var(--ink-2);max-width:38rem}
+ul,ol{margin:0 0 1rem;padding-left:1.15rem;max-width:var(--measure)}
+li{margin-bottom:.5rem}
+li::marker{color:var(--ox)}
+
+/* ---------- callouts ---------- */
+.call{border-left:2px solid var(--ox);background:var(--ox-tint);padding:1rem 1.2rem;
+  margin:1.4rem 0;max-width:var(--measure);border-radius:0 3px 3px 0}
+.call.quiet{border-left-color:var(--ink-3);background:var(--card);border:1px solid var(--rule);border-left:2px solid var(--ink-3)}
+.call .lbl{display:block;font-family:"Source Sans 3",system-ui,sans-serif;font-size:.61rem;
+  font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ox);margin-bottom:.4rem}
+.call.quiet .lbl{color:var(--ink-3)}
+.call p:last-child{margin-bottom:0}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;margin:1.2rem 0 .5rem;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-family:"Source Sans 3",system-ui,sans-serif;
+  font-size:.8rem;min-width:32rem}
+caption{caption-side:top;text-align:left;font-size:.63rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-3);padding-bottom:.6rem}
+th{text-align:left;font-weight:700;font-size:.68rem;letter-spacing:.03em;color:var(--ink);
+  border-bottom:1.5px solid var(--ink);padding:.5rem .6rem;white-space:nowrap}
+td{padding:.5rem .6rem;border-bottom:1px solid var(--rule-2);vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr.bench2 td{color:var(--ink-3);font-style:italic}
+tr.hl td{background:var(--pine-tint)}
+tr.hl2 td{background:var(--ox-tint)}
+tbody tr:last-child td{border-bottom:1px solid var(--rule)}
+.tnote{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.72rem;line-height:1.5;
+  color:var(--ink-3);max-width:var(--measure);margin:.3rem 0 1.6rem}
+.mk{font-weight:700;font-size:.65rem;letter-spacing:.06em}
+.mk-s{color:var(--pine)} .mk-a{color:var(--amber)} .mk-w{color:var(--ox)}
+
+/* ---------- recs ---------- */
+.rec{display:flex;gap:1rem;margin-bottom:1.5rem;max-width:44rem}
+.rec-n{font-family:"Source Sans 3",system-ui,sans-serif;font-size:1.5rem;font-weight:700;
+  color:var(--ox);line-height:1;flex:none;width:1.7rem;padding-top:.1rem;font-variant-numeric:tabular-nums}
+.rec-t{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.92rem;font-weight:700;margin-bottom:.3rem}
+.rec p{margin-bottom:0}
+
+/* ---------- footer ---------- */
+footer{margin-top:3.4rem;padding-top:2rem;border-top:1px solid var(--rule)}
+.srcs{columns:2;column-gap:2.4rem;font-family:"Source Sans 3",system-ui,sans-serif;
+  font-size:.74rem;line-height:1.5;color:var(--ink-2);padding-left:1.1rem}
+.srcs li{margin-bottom:.45rem;break-inside:avoid}
+.colophon{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.7rem;color:var(--ink-3);
+  margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--rule-2);max-width:44rem;line-height:1.6}
+
+.dl-inline{display:inline-flex;align-items:center;gap:.55rem;background:var(--ink);color:var(--paper);
+  padding:.85rem 1.3rem;border:0;border-radius:2px;font-family:"Source Sans 3",system-ui,sans-serif;
+  font-size:.84rem;font-weight:600;margin-top:.6rem;transition:background .18s ease}
+.dl-inline:hover{background:var(--ox);border:0}
+
+/* ---------- mobile ---------- */
+.railtop{display:none}
+@media(max-width:900px){
+  .shell{grid-template-columns:1fr}
+  .rail{display:none}
+  .railtop{display:flex;position:sticky;top:0;z-index:20;background:rgba(247,245,241,.94);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);padding:.7rem 1.25rem;
+    align-items:center;justify-content:space-between;gap:1rem}
+  .railtop .mark{margin:0;font-size:.56rem}
+  .railtop .dl{margin:0;padding:.5rem .8rem;font-size:.7rem}
+  .railtop .dl .sub{display:none}
+  main{padding:2rem 1.25rem 4rem}
+  .srcs{columns:1}
+  h1{font-size:2rem}
+  .dek{font-size:1.05rem}
+  .figure{padding:1.1rem .8rem .9rem;margin-left:-.4rem;margin-right:-.4rem}
+  .rec{gap:.7rem}
+  .flab{display:none}
+  .axl{font-size:19px}
+  .legend{display:block}
+  .curve{stroke-width:4}
+  .bench{stroke-width:2.4;stroke-dasharray:6 7}
+  .dot{r:0}
+}
+</style>
+</head>
+<body>
+
+<div class="railtop">
+  <div class="mark">Private Memorandum<span>School Selection · 2027</span></div>
+  <a class="dl" href="school-selection-report.pdf" download>Download PDF</a>
+</div>
+
+<div class="shell">
+
+  <aside class="rail">
+    <div class="mark">Private Memorandum<span>School Selection · 2027</span></div>
+    <ul class="nav">
+      <li><a href="#s1"><span class="rn">I</span>Executive Summary</a></li>
+      <li><a href="#s2"><span class="rn">II</span>The Premise</a></li>
+      <li><a href="#s3"><span class="rn">III</span>Classroom Technology</a></li>
+      <li><a href="#s4"><span class="rn">IV</span>Candidate Comparison</a></li>
+      <li><a href="#s5"><span class="rn">V</span>Outcome Evidence</a></li>
+      <li><a href="#s6"><span class="rn">VI</span>Recommendations</a></li>
+      <li><a href="#a1"><span class="rn">A</span>Methodology</a></li>
+      <li><a href="#a2"><span class="rn">B</span>Full City Data</a></li>
+      <li><a href="#a3"><span class="rn">C</span>Ranked Shortlist</a></li>
+      <li><a href="#sources"><span class="rn">—</span>Sources</a></li>
+    </ul>
+    <a class="dl" href="school-selection-report.pdf" download>Download the report
+      <span class="sub">PDF · 5 pages · 79 KB</span></a>
+  </aside>
+
+  <main>
+
+    <p class="eyebrow">Private research memorandum · rev. A</p>
+    <h1>Choosing a K–8 School for the Age of Machine Intelligence</h1>
+    <p class="dek">A liberal-arts framework and evidence review for River’s first-grade placement, New Orleans, 2027–28.</p>
+
+    <div class="meta">
+      <div><b>Subject</b>Homer Plessy 7th Ward vs. ISL St. Roch</div>
+      <div><b>Decision window</b>NCAP Main Round opens 2 Nov 2026</div>
+      <div><b>Revised</b>21 August 2026</div>
+    </div>
+
+    <!-- ============ HERO FIGURE ============ -->
+    <figure class="figure">
+      <div class="figure-head">The finding · K–3 literacy screener, spring 2026 · % reading on or above grade level</div>
+      <svg viewBox="0 0 720 300" role="img" aria-label="Line chart showing Plessy declining from 58.6% in kindergarten to 48.5% in third grade while ISL rises from 22.8% to 68.3%, crossing between grades one and two.">
+        <line class="gridl" x1="48" y1="24" x2="612" y2="24"/>
+        <line class="gridl" x1="48" y1="152" x2="612" y2="152"/>
+        <line class="gridl" x1="48" y1="280" x2="612" y2="280"/>
+        <text class="axl" x="20" y="28">100</text>
+        <text class="axl" x="26" y="156">50</text>
+        <text class="axl" x="32" y="284">0</text>
+        <text class="axl" x="40" y="298">K</text>
+        <text class="axl" x="226" y="298">GR 1</text>
+        <text class="axl" x="410" y="298">GR 2</text>
+        <text class="axl" x="594" y="298">GR 3</text>
+
+        <polyline class="bench draw" points="48,102 232,107 416,115 600,116"/>
+        <text class="flab draw" x="614" y="126" fill="#857B70" style="font-weight:600">Louisiana 64.0</text>
+
+        <polyline class="curve draw" stroke="#7A2E2E" points="48,130 232,102 416,134 600,156"/>
+        <polyline class="curve draw d2" stroke="#1F5C4D" points="48,222 232,178 416,128 600,105"/>
+
+        <circle class="dot draw" cx="48" cy="130" r="3.5" fill="#7A2E2E" style="animation-delay:1.1s"/>
+        <circle class="dot draw" cx="600" cy="156" r="4.5" fill="#7A2E2E" style="animation-delay:1.1s"/>
+        <circle class="dot draw" cx="48" cy="222" r="3.5" fill="#1F5C4D" style="animation-delay:1.1s"/>
+        <circle class="dot draw" cx="600" cy="105" r="4.5" fill="#1F5C4D" style="animation-delay:1.1s"/>
+
+        <text class="flab draw" x="614" y="160" fill="#7A2E2E">Plessy 48.5</text>
+        <text class="flab draw" x="614" y="101" fill="#1F5C4D">ISL 68.3</text>
+        <text class="flab draw" x="48" y="245" fill="#1F5C4D" style="font-weight:400">22.8 at K</text>
+      </svg>
+      <ul class="legend">
+        <li><i style="background:#1F5C4D"></i>ISL St. Roch <b>22.8 → 68.3</b></li>
+        <li><i style="background:#7A2E2E"></i>Homer Plessy <b>58.6 → 48.5</b></li>
+        <li><i class="dash"></i>Louisiana benchmark <b>64.0</b></li>
+      </ul>
+      <p class="figure-cap"><strong>Two opposite curves.</strong> ISL begins at 22.8% because it is not yet teaching English reading — first grade runs roughly 90% in French or Spanish — then climbs past the state benchmark by third grade. Plessy begins near average and declines to 48.5%, eleven points below its own district. Source: <a href="https://doe.louisiana.gov/data-and-reports/elementary-and-middle-school-performance">Louisiana Department of Education</a>.</p>
+    </figure>
+
+    <!-- ============ I ============ -->
+    <section id="s1">
+      <p class="snum">Section I</p>
+      <h2>Executive Summary</h2>
+
+      <p class="lede">The governing question is not which New Orleans school has adapted to artificial intelligence. None has, in any way that survives scrutiny. The question is which school builds the capacities that hold their value when routine cognitive output becomes cheap: close reading of difficult text, writing as an instrument of thought, quantitative reasoning, source discernment, and taste.</p>
+
+      <p>Those capacities describe the classical liberal arts curriculum. That is a strategic advantage rather than a limitation: it removes the need to forecast correctly. An education built on books, mathematics, argument, and the arts pays out whether or not the labor market transforms on schedule.</p>
+
+      <p>Two schools were examined in depth: <strong>Homer Plessy Community School (7th Ward campus)</strong>, the incumbent, and <strong>International School of Louisiana (St. Roch campus)</strong>, the leading alternative. A third, <strong>Audubon Charter School’s Montessori track</strong>, remains the strongest philosophical match but carries the longest admissions odds in the city.</p>
+
+      <h3>Principal findings</h3>
+      <ul>
+        <li><strong>Plessy runs the better curriculum on paper.</strong> Wit &amp; Wisdom, Illustrative Mathematics, Amplify Science, and daily dance, music, theater and visual art constitute the strongest liberal-arts alignment available tuition-free in the city.</li>
+        <li><strong>Plessy’s foundational reading deteriorates through the grades.</strong> On the spring 2026 K–3 literacy screener it moves from 58.6% at kindergarten to <strong>48.5% at third grade</strong>, fifteen points below the state and eleven below its own district.</li>
+        <li><strong>ISL pays a steep early cost, then clears the benchmark.</strong> Its kindergarteners register 22.8%, a direct consequence of immersion; by third grade they reach <strong>68.3%</strong>. Its five-year mathematics gain, +18 points, is the largest in the comparison set.</li>
+        <li><strong>Plessy is not moving its students.</strong> Economically disadvantaged students fell from 24% to 23% year over year; students with disabilities have been flat at 11% for two years. ISL gained six points in the same subgroup.</li>
+        <li><strong>ISL subordinates curriculum to language.</strong> Kindergarten and first grade run approximately 90% in French or Spanish; English Language Arts begins in second grade, sixty minutes daily.</li>
+        <li><strong>Plessy operates a 1:1 device program from first grade.</strong> Confirmed directly; devices remain on campus. Integration detail has been requested and is pending. ISL’s policy remains undisclosed.</li>
+      </ul>
+
+      <div class="call">
+        <span class="lbl">Recommendation in brief</span>
+        <p>Rank ISL above Plessy in the NCAP main round, with Audubon Montessori first as the high-value reach. Retain Plessy as an informed fallback contingent on a single question: what structured foundational-skills program does it run in grades K–2, and how does it account for a third-grade screener result eleven points below its own district?</p>
+      </div>
+
+      <div class="tw">
+        <table>
+          <caption>Scorecard — finalists against the stated criteria</caption>
+          <thead><tr><th>Criterion</th><th>Plessy — 7th Ward</th><th>ISL — St. Roch</th><th>Audubon — Montessori</th></tr></thead>
+          <tbody>
+            <tr><td>Liberal-arts curriculum design</td><td><span class="mk mk-s">STRONG</span> Wit &amp; Wisdom, Illustrative Math</td><td><span class="mk mk-w">WEAK</span> organized around language</td><td><span class="mk mk-a">ADEQUATE</span> materials-led inquiry</td></tr>
+            <tr><td>Foundational literacy outcomes</td><td><span class="mk mk-w">WEAK</span> 48.5% at grade 3</td><td><span class="mk mk-a">ADEQUATE</span> 68.3% at grade 3</td><td><span class="mk mk-s">STRONG</span> 82.5% at grade 3</td></tr>
+            <tr><td>Five-year trajectory</td><td><span class="mk mk-a">ADEQUATE</span> math up, ELA flat</td><td><span class="mk mk-s">STRONG</span> +10 ELA, +18 math</td><td><span class="mk mk-s">STRONG</span> +6 ELA, +19 math</td></tr>
+            <tr><td>Arts as core provision</td><td><span class="mk mk-s">STRONG</span> daily, four disciplines</td><td><span class="mk mk-w">WEAK</span> enrichment block</td><td><span class="mk mk-a">ADEQUATE</span> integrated</td></tr>
+            <tr><td>Low-device pedagogy</td><td><span class="mk mk-w">WEAK</span> 1:1 from grade 1, in-school</td><td><span class="mk mk-a">ADEQUATE</span> oral method; policy unknown</td><td><span class="mk mk-s">STRONG</span> materials-based</td></tr>
+            <tr><td>Commute from 70115</td><td><span class="mk mk-s">STRONG</span> incumbent</td><td><span class="mk mk-s">STRONG</span> +3–6 min</td><td><span class="mk mk-s">STRONG</span> Uptown</td></tr>
+            <tr><td>Admission probability</td><td><span class="mk mk-s">STRONG</span> rolling; enrolled</td><td><span class="mk mk-a">ADEQUATE</span> non-selective</td><td><span class="mk mk-w">WEAK</span> heavily oversubscribed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tnote">Ratings are the author’s synthesis of the evidence in Sections III–V, weighted to the criteria stated in Section II. Audubon figures are included for reference; it is treated as a reach application rather than a finalist.</p>
+    </section>
+
+    <!-- ============ II ============ -->
+    <section id="s2">
+      <p class="snum">Section II</p>
+      <h2>The Premise and What It Implies for Curriculum</h2>
+
+      <p>If machine intelligence commoditizes competent routine output — drafting, summarizing, first-pass analysis, boilerplate code — the durable capacities are those that direct such output rather than produce it. Judgment about which questions are worth asking. The ability to read a difficult argument closely enough to find its weak joint. Writing well enough to think clearly. Mathematics deep enough to know when a number is lying. Taste, meaning a trained sense of quality that can be articulated and defended.</p>
+
+      <p>None of this is novel pedagogy. It is the liberal arts curriculum, taught for centuries. The practical consequence for school selection is counterintuitive but firm:</p>
+
+      <div class="call quiet">
+        <span class="lbl">Selection principle</span>
+        <p>A school that markets “AI readiness,” one-to-one devices, or a technology-forward brand is providing evidence <em>against</em> alignment, not for it. The correct signal is a school that teaches whole books, sustained writing, real mathematics, and the arts, and that treats screens as an occasional tool rather than an organizing principle.</p>
+      </div>
+
+      <p>A second consequence concerns higher education. If the credential value of a degree erodes while its formation value persists, the case for building demonstrable capability early — rather than optimizing an admissions résumé — strengthens. That argues for depth over breadth in the K–8 years, and for institutions that produce work rather than scores.</p>
+    </section>
+
+    <!-- ============ III ============ -->
+    <section id="s3">
+      <p class="snum">Section III</p>
+      <h2>Classroom Technology: What the Evidence Supports</h2>
+
+      <p>One-to-one device provision is now the elementary norm. An <a href="https://www.edweek.org/technology/what-the-massive-shift-to-1-to-1-computing-means-for-schools-in-charts/2022/05">EdWeek Research Center survey</a> found roughly 40% of district leaders provided a device for every elementary student before the pandemic; by March 2021, 84% did. Ubiquity is not evidence of efficacy.</p>
+
+      <h4>What the literature holds</h4>
+      <ul>
+        <li>The <a href="https://www.naeyc.org/files/naeyc/file/positions/KeyMessages_Technology.pdf">NAEYC and Fred Rogers Center position statement</a> holds that technology should enhance without replacing creative play, physical activity, outdoor experience, conversation and social interaction. The harm is framed as displacement, not exposure.</li>
+        <li>UNESCO’s <a href="https://www.unesco.org/gem-report/en/articles/unesco-issues-urgent-call-appropriate-use-technology-education">2023 Global Education Monitoring Report</a> found benefits disappear when technology is used in excess or without a qualified teacher, and that distributing computers does not improve learning absent teacher involvement. Across seventeen U.S. states, only 11% of educators consulted peer-reviewed evidence before adopting an educational technology.</li>
+        <li>A meta-analysis of <a href="https://journals.sagepub.com/doi/10.3102/0034654321998074">39 studies and 1,812 children aged one to eight</a> found lower comprehension for digital books when medium was the only variable, and adult mediation during print reading outperformed digital enhancements read independently.</li>
+        <li>An EEG study in <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1219945/full"><em>Frontiers in Psychology</em></a> found markedly greater brain connectivity during handwriting than typing, prompting its authors to argue for a handwriting minimum in the lower grades. It used university students and has drawn published methodological objection; treat as suggestive.</li>
+      </ul>
+
+      <h4>The mechanism that matters most</h4>
+      <p>The sharpest finding for a parent concerned about “worker” versus “author” formation is the <em>use</em> divide. <a href="https://journals.sagepub.com/doi/10.3102/0091732X09349791">Warschauer and colleagues</a> documented that once access is equalized, application diverges by class: lower-SES students are directed toward drill and individualized practice while higher-SES students conduct research and analysis. Later work confirms that schools serving more marginalized students offer fewer opportunities for transformative digital learning at comparable access.</p>
+
+      <div class="call">
+        <span class="lbl">Implication for evaluation</span>
+        <p>Device count is a weak variable; instructional model is a strong one. The diligence question at any school tour is not whether children use laptops but what they do on them, for how many minutes, and whether that time supplements or substitutes for teacher-led instruction.</p>
+      </div>
+    </section>
+
+    <!-- ============ IV ============ -->
+    <section id="s4">
+      <p class="snum">Section IV</p>
+      <h2>Candidate Comparison: Pedagogy and Curriculum</h2>
+
+      <div class="tw">
+        <table>
+          <caption>Table 1 — Structural and pedagogical comparison</caption>
+          <thead><tr><th></th><th>Homer Plessy — 7th Ward</th><th>ISL — St. Roch</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Campus / transition</strong></td><td>PreK4–4th, 1651 N. Tonti St.; Tremé for 5–8</td><td>K–3rd, 2518 Arts St.; Camp St. (LGD) for 4–8</td></tr>
+            <tr><td><strong>Organizing model</strong></td><td>Arts-integrated, project-based</td><td>Language immersion, French or Spanish</td></tr>
+            <tr><td><strong>ELA</strong></td><td>Wit &amp; Wisdom</td><td>Target-language arts; English ELA from grade 2, 60 min/day</td></tr>
+            <tr><td><strong>Math / science</strong></td><td>Illustrative Mathematics; Amplify Science</td><td>Both taught in target language</td></tr>
+            <tr><td><strong>Arts</strong></td><td>Daily dance, music, theater, visual art; strings and band at Tremé</td><td>Art, music, PE as enrichment block</td></tr>
+            <tr><td><strong>Admission</strong></td><td>Type 1 charter; no testing</td><td>Non-selective; language proficiency required after 1 Sept, grade 1</td></tr>
+            <tr><td><strong>Daily hours</strong></td><td>8:00–3:00 (Wed 2:00)</td><td>8:00–3:30 (Wed 2:30)</td></tr>
+            <tr><td><strong>Device posture</strong></td><td>1:1 from grade 1; devices stay on campus</td><td>Undisclosed</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Plessy: the stronger curriculum on paper</h3>
+      <p>Plessy publishes its instructional materials, itself a mark of confidence. <a href="https://greatminds.org/english/witwisdom">Wit &amp; Wisdom</a> is among the most explicitly liberal-arts English curricula in American use: students work with complex grade-level books from classics to contemporary literature, and fine art is woven into every module as a subject of close examination. It holds top EdReports ratings and a Louisiana Tier 1 designation for all grades K–8. One fourth-grade module, per the <a href="https://www.doe.mass.edu/instruction/curate/ela-2023-wit-wisdom-k-5.pdf">Massachusetts CURATE review</a>, interweaves the novel <em>Love That Dog</em>, an informational text on the circulatory system, poems by Frost and Walter Dean Myers, and biographies of historical figures. Illustrative Mathematics is likewise problem-based and discourse-driven rather than procedural.</p>
+
+      <div class="call quiet">
+        <span class="lbl">Structural caveat</span>
+        <p>Wit &amp; Wisdom teaches students to read <em>to learn</em>. Its publisher states plainly that it does not systematically teach the youngest students to <em>learn to read</em>, and recommends pairing it with a separate research-based foundational-skills program. What Plessy uses for that half is not published. Section V suggests the question is material.</p>
+      </div>
+
+      <h3>ISL: curriculum subordinated to language</h3>
+      <p>ISL publishes no comparable materials list. Its <a href="https://www.isl-edu.org/curriculum">curriculum statement</a> holds that Louisiana standards provide the framework and that the test applied to every curricular decision is whether it fulfills the immersion mission — explicitly not whether a resource is strong on its merits. The progression is steep: roughly 90% of daily instruction in the target language in kindergarten and first grade, only enrichment possibly in English; roughly 80% in grades two through five, English Language Arts added at sixty minutes daily; roughly 25% in middle school.</p>
+
+      <p>The research is reassuring but conditional. <a href="https://www.researchgate.net/publication/265606009_Student_outcomes_in_one-way_two-way_and_indigenous_language_immersion_education">Genesee and Lindholm-Leary’s synthesis</a> finds immersion students reach competence in non-language subjects equal to mainstream peers, including under early total immersion — but conditions parity on assessment in the second language with allowance for incomplete acquisition. Louisiana’s LEAP is in English. Closing that gap is ISL’s central task, and Section V indicates it is being closed.</p>
+
+      <h3>Reference case: Audubon Charter Montessori</h3>
+      <p>Audubon serves as benchmark throughout: the only tuition-free school in the city whose pedagogy matches the Section III principle without qualification — hands-on materials, extended work periods, mixed-age classrooms, no dependence on screens — and the strongest performer of the three in Section V. The constraint is access: demand has run near 1,200 applications against roughly 171 Montessori seats, and an entry assessment applies from grade three, leaving grades one and two the only untested window.</p>
+
+      <div class="call quiet">
+        <span class="lbl">Device posture — partially resolved</span>
+        <p>Plessy’s one-to-one program was confirmed directly; integration detail pending. On-campus retention is meaningful mitigation — per Section III the open variable is application, not possession. ISL’s policy is undisclosed; its oral K–1 method argues against heavy use, but that is inference, not stated policy.</p>
+      </div>
+    </section>
+
+    <!-- ============ V ============ -->
+    <section id="s5">
+      <p class="snum">Section V</p>
+      <h2>Outcome Evidence</h2>
+
+      <div class="tw">
+        <table>
+          <caption>Table 2 — LEAP % Mastery and above, grades 3–8, five-year trend</caption>
+          <thead><tr><th>School</th><th class="n">2022</th><th class="n">2023</th><th class="n">2024</th><th class="n">2025</th><th class="n">2026</th><th class="n">Δ</th></tr></thead>
+          <tbody>
+            <tr class="hl2"><td>Homer Plessy — ELA</td><td class="n">34</td><td class="n">38</td><td class="n">41</td><td class="n">43</td><td class="n">41</td><td class="n">+7</td></tr>
+            <tr class="hl"><td>ISL — ELA</td><td class="n">52</td><td class="n">53</td><td class="n">59</td><td class="n">56</td><td class="n">62</td><td class="n">+10</td></tr>
+            <tr><td>Audubon — ELA</td><td class="n">63</td><td class="n">64</td><td class="n">66</td><td class="n">70</td><td class="n">69</td><td class="n">+6</td></tr>
+            <tr class="bench2"><td>Louisiana — ELA</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">43</td><td class="n">43</td><td class="n">0</td></tr>
+            <tr class="hl2"><td>Homer Plessy — Math</td><td class="n">19</td><td class="n">20</td><td class="n">22</td><td class="n">25</td><td class="n">27</td><td class="n">+8</td></tr>
+            <tr class="hl"><td>ISL — Math</td><td class="n">35</td><td class="n">39</td><td class="n">42</td><td class="n">46</td><td class="n">53</td><td class="n">+18</td></tr>
+            <tr><td>Audubon — Math</td><td class="n">32</td><td class="n">41</td><td class="n">43</td><td class="n">49</td><td class="n">51</td><td class="n">+19</td></tr>
+            <tr class="bench2"><td>Louisiana — Math</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">33</td><td class="n">34</td><td class="n">+1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tnote">LDOE <a href="https://doe.louisiana.gov/data-and-reports/elementary-and-middle-school-performance">School LEAP Mastery Summary</a>, 2023–2026 releases. Plessy’s ELA has plateaued and reversed over three cycles while its mathematics improves steadily; ISL’s mathematics gain is the largest here.</p>
+
+      <div class="tw">
+        <table>
+          <caption>Table 3 — K–3 Literacy Screener, spring 2026: % reading on or above grade level</caption>
+          <thead><tr><th>School</th><th class="n">Overall</th><th class="n">Kinder</th><th class="n">Grade 1</th><th class="n">Grade 2</th><th class="n">Grade 3</th></tr></thead>
+          <tbody>
+            <tr class="hl2"><td>Homer Plessy</td><td class="n">58.5</td><td class="n">58.6</td><td class="n">69.6</td><td class="n">56.9</td><td class="n">48.5</td></tr>
+            <tr class="hl"><td>Int’l School of Louisiana</td><td class="n">44.9</td><td class="n">22.8</td><td class="n">39.8</td><td class="n">59.4</td><td class="n">68.3</td></tr>
+            <tr><td>Audubon Charter</td><td class="n">75.9</td><td class="n">71.6</td><td class="n">69.3</td><td class="n">81.0</td><td class="n">82.5</td></tr>
+            <tr class="bench2"><td>Orleans Parish</td><td class="n">65.7</td><td class="n">73.5</td><td class="n">68.1</td><td class="n">62.2</td><td class="n">59.4</td></tr>
+            <tr class="bench2"><td>Louisiana statewide</td><td class="n">66.2</td><td class="n">69.0</td><td class="n">67.5</td><td class="n">64.4</td><td class="n">64.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tnote">LDOE 2025–26 EOY K–3 Literacy Screener. Measures foundational reading — decoding and phonics — the most direct evidence available on this question.</p>
+
+      <div class="call">
+        <span class="lbl">The decisive finding</span>
+        <p>The schools trace opposite curves. ISL begins at 22.8% because it is not yet teaching English reading, then climbs to 68.3% by third grade, above the state benchmark. Plessy begins near average and <em>declines</em> to 48.5%. Foundational reading is consolidating at one school and eroding at the other.</p>
+      </div>
+
+      <p><strong>Context.</strong> Louisiana has run Mississippi’s play and it has worked. State law requires all K–3 teachers and administrators to complete approved professional development in phonemic awareness, phonics, fluency, vocabulary and comprehension grounded in the science of reading. On the <a href="https://idahonews.com/news/nation-world/how-louisiana-boosted-its-reading-scores-by-going-back-to-the-basics-national-assessment-of-educational-progress-naep-nations-report-card-cade-brumley-education-crisis-in-the-classroom">2024 NAEP</a>, Louisiana fourth graders were the only cohort in the country to exceed pre-pandemic reading performance, and the state now ranks <a href="https://www.karenvaites.org/p/the-southern-surge-understanding">second nationally for low-income fourth-grade reading</a>. Two qualifications: the state describes its strategy as rejecting the false choice between foundational skills and content-rich curriculum, investing in both; and the approach has a documented ceiling, since <a href="https://hechingerreport.org/proof-points-8th-grade-reading/">those fourth-grade gains have not carried to eighth grade</a>. Phonics carries a child to third grade; knowledge-building carries them from fourth to eighth. Plessy has the second half and, on this evidence, may lack the first.</p>
+
+      <div class="tw">
+        <table>
+          <caption>Table 4 — Subgroup performance, % Mastery+ all subjects, 2025 → 2026</caption>
+          <thead><tr><th>Subgroup</th><th class="n">Plessy</th><th class="n">ISL</th><th class="n">Audubon</th></tr></thead>
+          <tbody>
+            <tr><td>Economically disadvantaged</td><td class="n">24 → 23</td><td class="n">31 → 37</td><td class="n">40 → 45</td></tr>
+            <tr><td>Not economically disadvantaged</td><td class="n">54 → 51</td><td class="n">54 → 57</td><td class="n">65 → 66</td></tr>
+            <tr><td>Black students</td><td class="n">15 → 17</td><td class="n">36 → 35</td><td class="n">35 → 39</td></tr>
+            <tr><td>White students</td><td class="n">58 → 58</td><td class="n">63 → 67</td><td class="n">70 → 72</td></tr>
+            <tr><td>Students with disabilities</td><td class="n">11 → 11</td><td class="n">23 → 29</td><td class="n">35 → 41</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tnote">LDOE 2026 School LEAP Mastery Subgroup Summary. Plessy carries a 41-point internal gap between white and Black students and a 28-point gap by income, with both halves flat or falling. River’s own subgroup scores 58 at Plessy against the school’s headline 41 — and 67 at ISL, 72 at Audubon.</p>
+    </section>
+
+    <!-- ============ VI ============ -->
+    <section id="s6">
+      <p class="snum">Section VI</p>
+      <h2>Recommendations</h2>
+
+      <div class="rec"><div class="rec-n">1</div><div>
+        <div class="rec-t">Rank ISL above Plessy in the NCAP main round.</div>
+        <p>The curriculum argument favors Plessy; the evidence on children’s actual reading favors ISL decisively. A program losing ground on foundational literacy through third grade cannot deliver the liberal-arts outcome its materials promise, however good those materials are. Suggested order: <strong>(1) Audubon Montessori — (2) ISL St. Roch — (3) The Willow School — (4) Lake Forest Elementary — (5) Plessy 7th Ward.</strong> Use all twelve available rankings; the algorithm can only match against schools listed.</p>
+      </div></div>
+
+      <div class="rec"><div class="rec-n">2</div><div>
+        <div class="rec-t">Put one diagnostic question to Plessy, verbatim.</div>
+        <p>“What structured foundational-skills program do you use in grades K–2, who on staff is trained in it, and how do you account for a third-grade literacy screener result of 48.5% against a district figure of 59.4%?” A ready, specific answer reopens Plessy as a genuine contender. Absence of one settles the matter.</p>
+      </div></div>
+
+      <div class="rec"><div class="rec-n">3</div><div>
+        <div class="rec-t">Verify three things at ISL before ranking.</div>
+        <p>Confirm the first-grade language requirement in writing, since proficiency becomes mandatory for applicants after 1 September of the first-grade year. Ask what English foundational-skills instruction, if any, occurs before grade two. Ask how the 3:30 dismissal and the grade-four campus transition to Camp Street are handled operationally.</p>
+      </div></div>
+
+      <div class="rec"><div class="rec-n">4</div><div>
+        <div class="rec-t">Apply to Waldorf School of New Orleans in parallel.</div>
+        <p>It is the only school in the city where minimal technology is stated pedagogy rather than concession, and the only one that satisfies the Section III principle without argument. It publishes no assessment data, which is a real cost; treat it as a hedge rather than a primary, and confirm current tuition and campus directly.</p>
+      </div></div>
+
+      <div class="rec"><div class="rec-n">5</div><div>
+        <div class="rec-t">Close the technology question at ISL as Plessy’s has been closed.</div>
+        <p>Plessy is now known to run one-to-one devices from grade one, on campus only, with integration detail pending. Put the identical three questions to ISL — daily minutes, specific programs, and whether screen time supplements or substitutes for teacher-led instruction. Per Section III these are the variables the research turns on, and the comparison is only meaningful if both answers are in hand.</p>
+      </div></div>
+
+      <div class="rec"><div class="rec-n">6</div><div>
+        <div class="rec-t">Treat the home as the primary site for taste and discernment.</div>
+        <p>No New Orleans school will deliver the full brief. The reading, argument, and aesthetic judgment described in Section II are built substantially outside school hours, and that portion is not subject to a lottery.</p>
+      </div></div>
+
+      <h3>Decision triggers</h3>
+      <ul>
+        <li><strong>2 November 2026 —</strong> NCAP main round opens; rankings due in January. Tour Audubon, ISL, and Waldorf before this date.</li>
+        <li><strong>Reconsider Plessy upward if</strong> it names a credible structured phonics program and its 2027 screener shows third-grade recovery above the district figure.</li>
+        <li><strong>Reconsider Plessy downward if</strong> the subgroup gaps widen again or the charter renewal recommendation this December is unfavorable.</li>
+        <li><strong>Audubon remains the ceiling.</strong> Grades 1–2 are the only untested Montessori entry point; from grade 3 an assessment applies. This window closes in two years.</li>
+      </ul>
+
+      <a class="dl-inline" href="school-selection-report.pdf" download>Download the full report (PDF, 5 pages)</a>
+    </section>
+
+
+    <!-- ============ APPENDIX A ============ -->
+    <section id="a1">
+      <p class="snum">Appendix A</p>
+      <h2>Methodology</h2>
+
+      <h4>Sources of record</h4>
+      <p>Every assessment figure in this memorandum was extracted directly from Louisiana Department of Education source workbooks, not from third-party aggregators. Three files were used:</p>
+      <ul>
+        <li><strong>2026 School LEAP Mastery Summary</strong> — school-level percent scoring Mastery or above, grades 3–8, for spring 2025 and spring 2026 administrations.</li>
+        <li><strong>2023 and 2024 School LEAP Mastery Summaries</strong> — earlier administrations, used to construct the five-year trend in Table 2.</li>
+        <li><strong>2025–2026 EOY K–3 Literacy Regular Screener Results</strong> — percent of students reading on or above grade level, reported by individual grade.</li>
+        <li><strong>2026 School LEAP Mastery Subgroup Summary</strong> — the same mastery measure disaggregated by economic status, race, and disability status.</li>
+      </ul>
+
+      <div class="call quiet">
+        <span class="lbl">Why not US News, Niche, or GreatSchools</span>
+        <p>Consumer aggregators publish proficiency figures built from multi-year rolling averages, typically 2021–22 through 2023–24. For Homer Plessy those sources report 34% ELA and 22% math; the current-year state figure is 41% and 27%. The aggregators understate by seven and five points respectively and lag the most recent administration by two years. Any comparison drawn from them is a comparison of schools as they were, not as they are.</p>
+      </div>
+
+      <h4>Why the K–3 screener is the decisive instrument</h4>
+      <p>LEAP begins at grade three. For a family choosing a first-grade placement, that means the headline scores describe children who entered the school years earlier under different leadership and different materials. The K–3 literacy screener measures the thing under construction right now — decoding, phonemic awareness, fluency — and reports it grade by grade, which makes the <em>shape</em> of a school's literacy development visible rather than only its average.</p>
+
+      <p>That shape is what separates the two finalists. A school can post a respectable overall figure while losing ground each year, or post a poor overall figure while gaining sharply. Both patterns appear in this data set, and the averages conceal both.</p>
+
+      <h4>On phonics and the science of reading</h4>
+      <p>The screener is also the instrument most sensitive to whether a school runs a structured foundational-skills program. Louisiana requires <a href="https://doe.louisiana.gov/data-and-reports/elementary-and-middle-school-performance">all K–3 teachers and administrators</a> to complete approved training in phonemic awareness, phonics, fluency, vocabulary, and comprehension grounded in the science of reading — the same policy architecture credited with Mississippi's gains. Statewide it has worked: Louisiana fourth graders were the only cohort in the nation to exceed pre-pandemic reading performance on the 2024 NAEP.</p>
+
+      <p>Two things follow. First, a New Orleans school posting weak and <em>declining</em> K–3 screener results is underperforming a policy environment specifically engineered to prevent that, which makes the result school-specific rather than systemic. Second, phonics is necessary but not sufficient: those same fourth-grade gains have <a href="https://hechingerreport.org/proof-points-8th-grade-reading/">not carried through to eighth grade</a>, because decoding alone does not carry a reader through middle-school text. A school needs both halves — structured foundational skills in K–2 and a knowledge-building curriculum from grade three onward. Section IV establishes that Wit &amp; Wisdom is explicitly only the second half.</p>
+
+      <h4>How the scorecard ratings were assigned</h4>
+      <p>The Strong / Adequate / Weak ratings in Section I are the author's synthesis, not published measures. Bands were applied as follows. <strong>Literacy outcomes:</strong> Strong is a third-grade screener above 75%, Adequate 60–75%, Weak below 60%. <strong>Trajectory:</strong> Strong is a five-year LEAP gain of ten points or more in either subject with no reversal in the final cycle. <strong>Curriculum design, arts, and device pedagogy:</strong> qualitative, argued in Sections III and IV. <strong>Admission probability:</strong> Strong is rolling or incumbent, Adequate is non-selective lottery, Weak is materially oversubscribed.</p>
+
+      <h4>Limitations</h4>
+      <ul>
+        <li>Private schools are not subject to state assessment, so Waldorf, École Bilingue, and the Episcopal schools cannot be compared on any outcome measure. Their inclusion rests on pedagogy alone.</li>
+        <li>Proficiency correlates strongly with school poverty rate. Peer composition, not instructional quality, explains much of the spread in Appendix B. Lake Forest Elementary is the notable exception and is flagged as such.</li>
+        <li>The Willow School's screener results are reported as <code>&gt;95%</code> under state suppression rules for near-ceiling values; the exact figure is unavailable.</li>
+        <li>Trend figures for 2022 are drawn from a differently formatted release and may reflect minor definitional changes.</li>
+        <li>Device posture at ISL was inferred from pedagogy, not confirmed by policy. Plessy's was confirmed directly.</li>
+      </ul>
+    </section>
+
+    <!-- ============ APPENDIX B ============ -->
+    <section id="a2">
+      <p class="snum">Appendix B</p>
+      <h2>Full City Data</h2>
+
+      <p class="lede">Every New Orleans school examined during this review, spring 2026, sorted by third-grade literacy screener. Benchmarks in italics.</p>
+
+      <div class="tw">
+        <table>
+          <caption>Table B1 — New Orleans K–8 schools, spring 2026</caption>
+          <thead><tr><th>School</th><th>Area</th><th class="n">LEAP ELA</th><th class="n">LEAP Math</th><th class="n">Screener K–3</th><th class="n">Screener Gr 3</th></tr></thead>
+          <tbody>
+            <tr><td>The Willow School</td><td>Uptown</td><td class="n">91</td><td class="n">85</td><td class="n">&gt;95</td><td class="n">&gt;95</td></tr>
+            <tr><td>Lake Forest Elementary</td><td>New Orleans East</td><td class="n">89</td><td class="n">86</td><td class="n">94.4</td><td class="n">94.5</td></tr>
+            <tr><td>Edward Hynes — Lakeview</td><td>Lakeview</td><td class="n">78</td><td class="n">63</td><td class="n">89.3</td><td class="n">89.9</td></tr>
+            <tr class="hl"><td>Audubon Charter (Montessori/French)</td><td>Uptown</td><td class="n">69</td><td class="n">51</td><td class="n">75.9</td><td class="n">82.5</td></tr>
+            <tr class="hl"><td>International School of Louisiana</td><td>St. Roch / LGD</td><td class="n">62</td><td class="n">53</td><td class="n">44.9</td><td class="n">68.3</td></tr>
+            <tr><td>Lycée Français International</td><td>Uptown</td><td class="n">57</td><td class="n">47</td><td class="n">47.8</td><td class="n">66.0</td></tr>
+            <tr><td>Alice M. Harte Elementary</td><td>Algiers</td><td class="n">46</td><td class="n">32</td><td class="n">78.8</td><td class="n">65.8</td></tr>
+            <tr><td>Bricolage Academy</td><td>Mid-City</td><td class="n">41</td><td class="n">29</td><td class="n">70.1</td><td class="n">65.1</td></tr>
+            <tr><td>Morris Jeff Community School</td><td>Mid-City</td><td class="n">35</td><td class="n">21</td><td class="n">66.1</td><td class="n">61.9</td></tr>
+            <tr><td>Edward Hynes — Parkview</td><td>Gentilly</td><td class="n">42</td><td class="n">26</td><td class="n">72.1</td><td class="n">61.8</td></tr>
+            <tr><td>Wilson Charter School</td><td>Broadmoor</td><td class="n">31</td><td class="n">21</td><td class="n">69.4</td><td class="n">60.9</td></tr>
+            <tr><td>Benjamin Franklin Elem. Math &amp; Science</td><td>Gentilly</td><td class="n">33</td><td class="n">17</td><td class="n">59.6</td><td class="n">60.7</td></tr>
+            <tr><td>Edward Hynes — UNO</td><td>Lakefront</td><td class="n">53</td><td class="n">34</td><td class="n">72.4</td><td class="n">59.8</td></tr>
+            <tr><td>Audubon Charter Gentilly</td><td>Gentilly</td><td class="n">38</td><td class="n">18</td><td class="n">45.0</td><td class="n">56.6</td></tr>
+            <tr class="hl2"><td><strong>Homer Plessy Community School</strong></td><td>7th Ward / Tremé</td><td class="n">41</td><td class="n">27</td><td class="n">58.5</td><td class="n">48.5</td></tr>
+            <tr class="bench2"><td>Orleans Parish</td><td>—</td><td class="n">39</td><td class="n">26</td><td class="n">65.7</td><td class="n">59.4</td></tr>
+            <tr class="bench2"><td>Louisiana statewide</td><td>—</td><td class="n">43</td><td class="n">34</td><td class="n">66.2</td><td class="n">64.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tnote">LEAP figures are percent scoring Mastery or above, grades 3–8, spring 2026. Screener figures are percent reading on or above grade level, end of year 2025–26. Sources: LDOE School LEAP Mastery Summary and EOY K–3 Literacy Screener.</p>
+
+      <div class="call">
+        <span class="lbl">What the full table shows</span>
+        <p>Plessy has the lowest third-grade literacy screener result of any school in this set — below Audubon Gentilly, below Benjamin Franklin Elementary, below every C-rated school examined. It is eleven points under the district and fifteen and a half under the state.</p>
+        <p>Note also that ISL's overall K–3 figure of 44.9% is the second-lowest in the table while its third-grade figure is fifth-highest. That inversion is the immersion curve, and it is the reason an overall average is the wrong number to read for this school.</p>
+      </div>
+
+      <h4>Schools examined and set aside</h4>
+      <ul>
+        <li><strong>Lycée Français International</strong> — academically sound (57/47, third-grade screener 66.0) but under AEFE probation, litigating against its accreditor in two countries, operating an $835,000 deficit after losing 17.5% of enrollment, and requiring a French proficiency exam for entry at grades 1–12. Not viable this cycle.</li>
+        <li><strong>Audubon Charter Gentilly</strong> — shares the Montessori model and the name but not the results.</li>
+        <li><strong>Trinity Episcopal</strong> — strong school, but tuition explicitly includes one-to-one iPads from grade one and MacBook Airs from grade five.</li>
+        <li><strong>Cathedral Montessori</strong> (ends at grade 6) and <strong>Stuart Hall</strong> (ends at grade 7) — both would require moving again mid-sequence.</li>
+        <li><strong>Wilson, Benjamin Franklin Elementary, Morris Jeff, Bricolage</strong> — all below or near Plessy on LEAP; no gain from switching.</li>
+      </ul>
+    </section>
+
+    <!-- ============ APPENDIX C ============ -->
+    <section id="a3">
+      <p class="snum">Appendix C</p>
+      <h2>Ranked Shortlist</h2>
+
+      <p class="lede">Ten K–8 options ranked on the composite of pedagogy fit, current outcomes, and distance from 70115. Tuition figures for private schools are from secondary sources and should be confirmed directly.</p>
+
+      <div class="tw">
+        <table>
+          <caption>Table C1 — Top ten by fit, entering grade 1</caption>
+          <thead><tr><th class="n">#</th><th>School</th><th>Cost</th><th class="n">Gr 3 screener</th><th>The case, and the catch</th></tr></thead>
+          <tbody>
+            <tr class="hl"><td class="n">1</td><td><strong>Audubon Charter — Montessori</strong><br><span style="color:var(--ink-3)">Uptown, K–8</span></td><td>Free</td><td class="n">82.5</td><td>The only tuition-free school whose pedagogy matches the brief without argument. Catch: roughly 1,200 applications for 171 seats, and testing applies from grade 3.</td></tr>
+            <tr class="hl"><td class="n">2</td><td><strong>International School of Louisiana</strong><br><span style="color:var(--ink-3)">St. Roch → Camp St., K–8</span></td><td>Free</td><td class="n">68.3</td><td>Fastest riser in the city, non-selective by design, immersion is inherently low-device. Catch: near-zero English literacy instruction in grade 1.</td></tr>
+            <tr><td class="n">3</td><td><strong>The Willow School</strong><br><span style="color:var(--ink-3)">Uptown, K–12</span></td><td>Free</td><td class="n">&gt;95</td><td>Best outcomes in the city, arts-based, walkable. Catch: hardest admission in New Orleans, and 20% economically disadvantaged means composition explains much of the result.</td></tr>
+            <tr><td class="n">4</td><td><strong>Lake Forest Elementary</strong><br><span style="color:var(--ink-3)">New Orleans East, K–8</span></td><td>Free</td><td class="n">94.5</td><td>The only school whose results aren't explained by who enrolls: 94.5% at 70% economically disadvantaged. Catch: 30–40 minutes each way, selective supplemental application.</td></tr>
+            <tr><td class="n">5</td><td><strong>Waldorf School of New Orleans</strong><br><span style="color:var(--ink-3)">Nursery–8</span></td><td>~$6–12K</td><td class="n">n/a</td><td>The only school in the city where minimal technology is stated pedagogy. Catch: ~150 students, no assessment data at all, ends at grade 8.</td></tr>
+            <tr><td class="n">6</td><td><strong>Edward Hynes — Lakeview</strong><br><span style="color:var(--ink-3)">Lakeview, K–8</span></td><td>Free</td><td class="n">89.9</td><td>Second-best screener among mid-size schools. Catch: most-applied-to elementary in the city, and a long run from Uptown.</td></tr>
+            <tr><td class="n">7</td><td><strong>École Bilingue</strong><br><span style="color:var(--ink-3)">821 General Pershing, PK–8</span></td><td>~$10–17K</td><td class="n">n/a</td><td>French, ~7:1 ratio, AEFE-accredited, and inside your zip code. Catch: verify whether grade-1 entry requires French proficiency, as it does at Lycée and Audubon's French track.</td></tr>
+            <tr><td class="n">8</td><td><strong>Alice M. Harte Elementary</strong><br><span style="color:var(--ink-3)">Algiers, PK–8</span></td><td>Free</td><td class="n">65.8</td><td>Screener well above its LEAP figure suggests foundational instruction is working. Catch: Algiers, and 79% economically disadvantaged with a wide internal gap.</td></tr>
+            <tr><td class="n">9</td><td><strong>St. George's Episcopal</strong><br><span style="color:var(--ink-3)">Uptown, nursery–8</span></td><td>Confirm</td><td class="n">n/a</td><td>Small, Uptown, K–8 without a mid-sequence move. Catch: no published outcome data and no published technology policy.</td></tr>
+            <tr class="hl2"><td class="n">10</td><td><strong>Homer Plessy — 7th Ward</strong><br><span style="color:var(--ink-3)">Incumbent, PreK4–8</span></td><td>Free</td><td class="n">48.5</td><td>Best curriculum on paper in the free field, daily arts, already enrolled, no admissions risk. Catch: the lowest third-grade literacy screener in Appendix B.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tnote">Screener column is percent of third graders reading on or above grade level, spring 2026. <code>n/a</code> indicates a private school not subject to state assessment. Ranking is the author's composite judgment against the criteria in Section II, not a published measure.</p>
+
+      <div class="call">
+        <span class="lbl">How to use this list</span>
+        <p>NCAP permits twelve rankings and the algorithm can only match against schools listed, so there is no cost to ranking deeply. Enter numbers 1 through 4 and 6 and 8 in that order, then fill remaining slots with anything acceptable. Apply to Waldorf and École Bilingue in parallel on their own timelines, since private admissions run outside NCAP entirely.</p>
+        <p>Plessy at position ten is not a condemnation. It is the position of a school with the right materials, the wrong results, and one unanswered question that could move it several places in either direction.</p>
+      </div>
+    </section>
+
+    <footer id="sources">
+      <h4 style="margin-top:0">Sources</h4>
+      <ol class="srcs">
+        <li>Louisiana Department of Education, <a href="https://doe.louisiana.gov/data-and-reports/elementary-and-middle-school-performance">Elementary and Middle School Performance</a> data files, 2022–2026.</li>
+        <li>Homer Plessy Community Schools, <a href="https://www.plessyschool.org/faq-policies">FAQ and Policies</a>.</li>
+        <li>International School of Louisiana, <a href="https://www.isl-edu.org/curriculum">Curriculum</a> and <a href="https://www.isl-edu.org/about-isl">About ISL</a>.</li>
+        <li>Great Minds, <a href="https://greatminds.org/english/witwisdom">Wit &amp; Wisdom</a>; Massachusetts DESE, <a href="https://www.doe.mass.edu/instruction/curate/ela-2023-wit-wisdom-k-5.pdf">CURATE review</a>.</li>
+        <li>NAEYC &amp; Fred Rogers Center, <a href="https://www.naeyc.org/files/naeyc/file/positions/KeyMessages_Technology.pdf">Technology and Interactive Media in Early Childhood</a>.</li>
+        <li>UNESCO, <a href="https://www.unesco.org/gem-report/en/publication/technology">GEM Report 2023: Technology in Education</a>.</li>
+        <li>Furenes, Kucirkova &amp; Bus, <a href="https://journals.sagepub.com/doi/10.3102/0034654321998074">“Children’s Reading on Paper Versus Screen,”</a> <em>Rev. Educ. Res.</em> 91(4).</li>
+        <li>Van der Weel &amp; Van der Meer, <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1219945/full"><em>Frontiers in Psychology</em></a> 14:1219945.</li>
+        <li>Warschauer &amp; Matuchniak, <a href="https://journals.sagepub.com/doi/10.3102/0091732X09349791">“New Technology and Digital Worlds,”</a> <em>Rev. Res. Educ.</em> 34(1).</li>
+        <li>Genesee &amp; Lindholm-Leary, <a href="https://www.researchgate.net/publication/265606009_Student_outcomes_in_one-way_two-way_and_indigenous_language_immersion_education">Student Outcomes in Language Immersion Education</a>.</li>
+        <li>Hechinger Report, <a href="https://hechingerreport.org/proof-points-8th-grade-reading/">“Why the Mississippi Miracle Disappears by Eighth Grade.”</a></li>
+        <li>The Lens, <a href="https://thelensnola.org/2025/11/20/compare-2025-school-performance-scores-for-new-orleans-charters/">2025 School Performance Scores</a>.</li>
+      </ol>
+      <p class="colophon">Assessment figures were extracted directly from the Louisiana Department of Education’s published <em>School LEAP Mastery Summary</em> and <em>K–3 Literacy Screener</em> files rather than from third-party aggregators, whose figures for these schools lag by two to three years. Scorecard ratings are the author’s synthesis. Private memorandum — not for redistribution.</p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.rail .nav a'));
+  var secs  = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if(!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var i = secs.indexOf(e.target);
+      links.forEach(function(a,j){ a.setAttribute('aria-current', j===i ? 'true' : 'false'); });
+    });
+  }, {rootMargin:'-15% 0px -70% 0px'});
+  secs.forEach(function(s){ if(s) io.observe(s); });
+})();
+</script>
+</body>
+</html>
